@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import ACTION_TYPES from '../../actions/actionTypes';
+import * as actionCreators from '../../actions'
 
 function Counter(props) {
   return (
@@ -14,8 +14,8 @@ function Counter(props) {
 
 const mapActions = (dispatch) => {
     return{
-        add: () => dispatch({type: ACTION_TYPES.COUNTER_ADD}),
-        sub: () => dispatch({type: ACTION_TYPES.COUNTER_SUB}),
+        add: () => dispatch(actionCreators.add()),
+        sub: () => dispatch(actionCreators.sub()),
     }
 };
 
