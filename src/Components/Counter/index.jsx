@@ -20,8 +20,9 @@ const mapActions = (dispatch) => {
 };
 
 const mapStates = (state) => {
-  const {value} = state;  
-  return {value};
+  // const {value} = state;  
+  // return {value};
+  state.counterReducer
 } 
 
 export default connect(mapStates, mapActions) (Counter); 
