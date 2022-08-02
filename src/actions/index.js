@@ -6,3 +6,7 @@ export const setStep = (newStep) => ({
     type: ACTION_TYPES.COUNTER_SET_STEP,
     value: newStep,
 });
+export const setTheme = (isLight) => ({
+        type: ACTION_TYPES.SET_THEME,
+        isLight: isLight,
+});
