@@ -21,5 +21,4 @@ const mapDispatchToProps = (dispatch) => {
 }
 const mapStateToProps = (state) => {return state.themeReducer};
 
-export default connect(mapStateToProps,
-mapDispatchToProps) (ThemeSwitcher);
+export default connect(mapStateToProps, mapDispatchToProps) (ThemeSwitcher);

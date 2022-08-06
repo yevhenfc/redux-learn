@@ -10,3 +10,31 @@ export const setTheme = (isLight) => ({
         type: ACTION_TYPES.SET_THEME,
         isLight: isLight,
 });
+
+export const createUser = (data) => {
+    return {
+        type: ACTION_TYPES.CREATE_USER,
+        data: data,
+    }
+};
+
+export const updateUser = (newData) => {
+    return {
+        type: ACTION_TYPES.UPDATE_USER,
+        data: newData,
+    }
+};
+
+export const deleteUser = (id) => {
+    return {
+        type: ACTION_TYPES.DELETE_USER,
+        id: id,
+    }
+};
+
+export const getUser = (id) => {
+    return {
+        type: ACTION_TYPES.READ_USER,
+        id: id,
+    }
+};

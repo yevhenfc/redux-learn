@@ -1,6 +1,7 @@
 import React from 'react';
 import  {connect} from 'react-redux'
 import * as actionCreators from '../../actions';
+
 function Counter(props) {
   const stepHandler = (e) => {
     props.setStep(Number(e.target.value));
