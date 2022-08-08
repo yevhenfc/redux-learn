@@ -16,7 +16,7 @@ function UserData(props) {
   )
 }
 
-const mapStateToProps = (state) => state.userInfo;
+const mapStateToProps = (state) => state.userData;
 
 const mapDispatchToProps = (dispatch) => {
   return{
