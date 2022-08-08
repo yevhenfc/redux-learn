@@ -6,7 +6,7 @@ import userReducer    from "./userReducer";
 const rootReducer = combineReducers({
     counterReducer: counterReducer,
     themeReducer  : themeReducer,
-    userReducer   : userReducer,
+    user   : userReducer,
 })
 
 export default rootReducer;

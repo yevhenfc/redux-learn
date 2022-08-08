@@ -1,9 +1,11 @@
 import ACTION_TYPES from "../actions/actionTypes";
 
+let counter = 1000; 
+
 const db = [
-    {id: Date.now(), login: 'vasya100', email: 'vasya1@mail.com'},
-    {id: Date.now(), login: 'vasya101', email: 'vasya2@mail.com'},
-    {id: Date.now(), login: 'vasya102', email: 'vasya3@mail.com'},
+    {id: counter++, login: 'vasya100', email: 'vasya@mail.com', isPay: false}, 
+    {id: counter++, login: 'ann', email: 'ann@mail.com', isPay: false},
+    {id: counter++, login: 'kasper1', email: 'kasper@mail.com', isPay: false}
 ];
 
 const initialState = {
@@ -20,7 +22,8 @@ const userReducer = (state = initialState, action) => {
             const {data} = action;
             const newUser = {
                 ... data,
-                id: Date.now(),
+                id: counter++,
+                isPay: false,
             };
             const newUsersDB = [...users, newUser];
             return newUsersDB;
@@ -47,7 +50,7 @@ const userReducer = (state = initialState, action) => {
             const {users, currentUser} = state; 
             const {id}= action;
             const newUsersDB = [...users];
-            const findUserIndex = newUsersDB.findIndex(u => data.id == u.id);
+            const findUserIndex = newUsersDB.findIndex(u => id == u.id);
             return {currentUser: newUsersDB[findUserIndex]};
         };
 

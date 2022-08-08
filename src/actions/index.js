@@ -1,5 +1,4 @@
 import ACTION_TYPES from "./actionTypes";
-
 export const add = () => ({type: ACTION_TYPES.COUNTER_ADD});
 export const sub = () => ({type: ACTION_TYPES.COUNTER_SUB});
 export const setStep = (newStep) => ({
@@ -7,34 +6,32 @@ export const setStep = (newStep) => ({
     value: newStep,
 });
 export const setTheme = (isLight) => ({
-        type: ACTION_TYPES.SET_THEME,
-        isLight: isLight,
+    type: ACTION_TYPES.SET_THEME,
+    isLight: isLight
 });
 
-export const createUser = (data) => {
-    return {
+export const createUser = (newUser) => {
+    return{
         type: ACTION_TYPES.CREATE_USER,
-        data: data,
+        data: newUser,
     }
 };
 
 export const updateUser = (newData) => {
-    return {
+    return{
         type: ACTION_TYPES.UPDATE_USER,
-        data: newData,
+        data: newData
     }
-};
-
+}
 export const deleteUser = (id) => {
-    return {
+    return{
         type: ACTION_TYPES.DELETE_USER,
         id: id,
     }
-};
-
+}
 export const getUser = (id) => {
-    return {
+    return{
         type: ACTION_TYPES.READ_USER,
         id: id,
     }
-};
+}
