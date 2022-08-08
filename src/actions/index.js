@@ -48,9 +48,10 @@ export const getUserRequest = () => {
     }
 }
 
-export const getUserSuccess = () => {
+export const getUserSuccess = (user) => {
     return{
-        type: ACTION_TYPES.GET_USER_SUCCESS
+        type: ACTION_TYPES.GET_USER_SUCCESS,
+        user
     }
 }
 
