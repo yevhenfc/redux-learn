@@ -35,3 +35,28 @@ export const getUser = (id) => {
         id: id,
     }
 }
+
+export const getUserAction = () => {
+    return{
+        type: ACTION_TYPES.GET_USER_ACTION
+    }
+}
+
+export const getUserRequest = () => {
+    return{
+        type: ACTION_TYPES.GET_USER_REQUEST
+    }
+}
+
+export const getUserSuccess = () => {
+    return{
+        type: ACTION_TYPES.GET_USER_SUCCESS
+    }
+}
+
+export const getUserError = (error) => {
+    return{
+        type: ACTION_TYPES.GET_USER_ERROR,
+        error
+    }
+}

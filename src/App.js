@@ -1,11 +1,11 @@
 import './App.css';
 import React from 'react';
-import UserList from './Components/UserList';
+import UserData from './Components/UserData';
 
 export default function App() {
   return (
     <>
-      <UserList />
+      <UserData />
     </>
   );
 }
