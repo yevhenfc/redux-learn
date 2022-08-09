@@ -1,12 +1,23 @@
-import { configureStore } from '@reduxjs/toolkit';
-//import counterReducer from '../reducers/counterReducer';
+import { configureStore, getDefaultMiddleware } from '@reduxjs/toolkit';
 import rootReducer from '../reducers';
 import rootSaga from '../sagas';
 import createSagaMiddleware from '@redux-saga/core';
 import { applyMiddleware } from 'redux';
+import { composeWithDevTools } from 'redux-devtools-extension';
 
-const saga = createSagaMiddleware;
-const store = configureStore({reducer: rootReducer}, applyMiddleware(saga));
-saga.run(rootSaga);
 
+const sagaMiddleware = createSagaMiddleware();
+
+const middleware = [sagaMiddleware];
+
+const store = configureStore({
+      reducer: rootReducer,
+      middleware,
+    }, 
+    composeWithDevTools(applyMiddleware(middleware))
+);
+
+sagaMiddleware.run(rootSaga);
+
+    
 export default store;
