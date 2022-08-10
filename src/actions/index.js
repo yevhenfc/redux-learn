@@ -36,6 +36,7 @@ export const getUser = (id) => {
     }
 }
 
+//saga
 export const getUserAction = () => {
     return{
         type: ACTION_TYPES.GET_USER_ACTION

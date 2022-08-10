@@ -1,13 +1,11 @@
 import React from 'react';
 import './App.css';
-import UserList from './Components/UserList';
-import UserData from './Components/UserData';
-import SignupForm from './Components/SignupForm';
+import UserPage from './pages/UserPage';
 
 function App() {
   return (
     <>
-      <SignupForm />
+      <UserPage />
     </>
   );
 }
