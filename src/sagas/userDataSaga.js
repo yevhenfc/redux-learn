@@ -1,6 +1,6 @@
 import { getUserRequest, getUserError, getUserAction, getUserSuccess} from "../actions";
 import {put} from 'redux-saga/effects';
-import { getRandomUser } from "../api";
+import getRandomUser from "../api";
 
 function *userDataSaga(action){
     yield put(getUserRequest())
